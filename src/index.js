@@ -8,6 +8,8 @@ import countryListTemplate from './templates/country-list.hbs';
 
 const DEBOUNCE_DELAY = 300;
 
+refs.input.insertAdjacentHTML('beforebegin', '<h1 class="page-title">Country search</h1>')
+
 refs.input.addEventListener('input', debounce(searchHandler, DEBOUNCE_DELAY));
 
 function renderCountryCard(countries) {
